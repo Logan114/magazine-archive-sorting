@@ -1,0 +1,13 @@
+#telecom magazin sorting by year
+import subprocess
+import os
+beginning = int(float(1999))
+end = int(float(2010) +1)
+time = int(float(end-beginning))
+for t in range (beginning, end):
+    folders = str(t)
+    os.mkdir(folders)
+    command = str(('mv telecom_'+ str(t)+'* '+str(t)+'/'))
+    print (command)
+    os.system(command)
+
