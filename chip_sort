@@ -1,0 +1,14 @@
+#chip magazin archive sorting by year
+name = ("download.php?file=chip_magazin_")
+import subprocess
+import os
+beginning = int(float(1989))
+end = int(float(2016) +1)
+time = int(float(end-beginning))
+for t in range (beginning, end):
+    folders = str(t)
+    os.mkdir(folders)
+    command = str(("mv "+str(name)+ str(t)+'* '+str(t)+'/'))
+    print (command)
+    os.system(command)
+
